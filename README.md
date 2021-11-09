@@ -1,7 +1,7 @@
 -̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶DOT FILES-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶
 
 **I3-gaps**
------------------------------
+
 
 **Wallpaper**: [Ichigoame](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+)
 **Dock**: Polybar
