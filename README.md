@@ -1,3 +1,8 @@
+<!-- HEADERS -->
+<p align="center">
+  <img width="35%" src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/ign_waifu.png" />
+</p>
+
 <p align="center">
   <b> MY BSPWM RICE </b>
 </p>
