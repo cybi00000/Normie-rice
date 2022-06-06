@@ -1,3 +1,13 @@
+<p align="center">
+  <b> MY BSPWM RICE </b>
+</p>
+<img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="600px">
+
+
+
+
+
+
 -̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶**I3-gaps**-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶
 
 *Wallpaper: [Ichigoame](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+).*
