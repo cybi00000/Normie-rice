@@ -1,0 +1,139 @@
+(defwidget search_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "search-full" :onclick "~/bin/launcher.sh" "")))
+    (defwidget power_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "power-full" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")))
+    (defwidget reboot_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "reboot-full" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")))
+    (defwidget lock_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "lock-full" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")))
+    (defwidget suspend_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "suspend-full" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")))
+    (defwidget logout_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "logout-full" :onclick "~/.config/eww/scripts/logout.sh" :timeout "10s" "")))
+    (defwidget close_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "power-full" :onclick "~/bin/centerkill" "")))
+
+  
+    (defwidget weather [] 
+      (box :orientation "v" :space-evenly "false" 
+        (box :orientation "h" :space-evenly "false" 
+          (box :class "weather-icon" :style "color: ${weather-hex}" {weather-icon})
+          (box :class "temperature" "${temperature}  "))
+        (box :orientation "v" :space-evenly "false" 
+          (box :class "weather-stat" {weather-stat})
+          (box :class "weather-quote-head" {weather-quote})
+          (box :class "weather-quote-tail" {weather-quote2}))))
+          
+          
+          
+           
+  (defwidget player [] 
+      (box :orientation "v" :space-evenly "false" 
+              (box :class "musicart" :style "background-image: url('${cover}');" {art})
+              (box :class "musictitle" "${music3}${title}")
+              (box :class "musicartist" "${music2}${artist}")
+        (box :orientation "h" :halign "center" :class "musicbtn" :space-evenly "false" 
+          (button :onclick "playerctl previous" "")
+           (button :onclick "playerctl play-pause" {musicstat})
+          (button :onclick "playerctl next" ""))
+          (box :orientation "h" :class "music-slider" :space-evenly "false" :halign "center" 
+                  (scale :min 0 :max 101 :value {musicpos} :active "false"))))
+                  
+                  
+        (defwidget player_side [] 
+      (box :orientation "h" :space-evenly "false" 
+              (box :class "musicart-side" :style "background-image: url('${cover}');" {art})
+        (box :class "musicstuff-side" :orientation "v" :space-evenly "false" 
+                (box :class "musicinfo-side" "${music3}${title}")
+          (box :orientation "h" :halign "center" :class "musicbtn-side" :space-evenly "false" 
+            (button :onclick "playerctl previous" "")
+             (button :class "pause-play-side" :onclick "playerctl play-pause" {musicstat})
+            (button :onclick "playerctl next" "")))))
+          
+          
+    ;; Music vars
+    (defpoll music :interval "5s"  "playerctl metadata --format '{{ artist }} - {{ title }}'")
+    (defpoll music2 :interval "1s"  "~/.config/eww/scripts/getartist")
+    (defpoll music3 :interval "1s"  "~/.config/eww/scripts/gettitle")
+    (defpoll art :interval "2s"  "~/.config/eww/scripts/getart")
+    (defpoll volume :interval "16ms"  "~/.config/eww/scripts/getvol")
+    (defpoll bright :interval "16ms"  "~/.config/eww/scripts/getbri")
+    (defpoll musicstat :interval "1s"  "~/.config/eww/scripts/spotifystatus")
+    (defpoll cover :interval "1s"  "~/.config/eww/scripts/echoart")
+    (defpoll title :interval "1s"  "~/.config/eww/scripts/echotitle")
+    (defpoll artist :interval "1s"  "cat /tmp/xmonad/spotify/artist")
+    (defpoll musicpos :interval "16ms"  "~/.config/eww/scripts/getposition")
+     
+    ;; Weather vars
+    (defpoll weather-icon :interval "30s"  "cat /tmp/xmonad/weather/weather-icon")
+    (defpoll temperature :interval "30s"  "cat /tmp/xmonad/weather/weather-degree")
+    (defpoll weather-hex :interval "30s"  "cat /tmp/xmonad/weather/weather-hex")
+    (defpoll weather-quote :interval "30s"  "~/.config/eww/scripts/getwethquote")
+    (defpoll weather-quote2 :interval "30s"  "~/.config/eww/scripts/getwethquote2")
+    (defpoll weather-stat :interval "30s"  "cat /tmp/xmonad/weather/weather-stat")
+    (defpoll weather-stat-side :interval "30s"  "~/.config/eww/scripts/weather-trimmer")
+
+  
+    ;; Main Stuff
+    ;; (defwindow calendar_full 
+    ;;		    :geometry (geometry :x "505px" :y "100px" :width "100px" :height "100px")
+			     
+				;; 
+;; 
+;; (calendar_full)
+;; 
+;;)
+    
+     (defwindow weather 
+			    :geometry (geometry :x "1045px" :y "55px" :width "295px" :height "90px" :hexpand "false" :vexpand "false")
+			     				(weather))
+     
+
+
+ (defwindow powermenu :focusable "true" 
+		    :geometry (geometry :x "35%" :y "20%" :width "30%" :height "40%")
+			     
+ 
+ 
+ (powermenu)
+ 
+)
+
+ (defwindow player 
+			    :geometry (geometry :x "900px" :y "55px" :width "310px" :height "424px")
+			     				(player))
+			     				
+(defwindow player_side 
+			    :geometry (geometry :x "900px" :y "55px" :width "285px" :height "120px")
+			     				(player_side))
+
+
+
+
+  (defwindow search_full 
+			    :geometry (geometry :x "173px" :y "534px" :width "100px" :height "110px")
+			     				(search_full))
+    (defwindow power_full 
+			    :geometry (geometry :x "480px" :y "320px" :width "100px" :height "100px")
+			     				(power_full))
+     (defwindow reboot_full 
+			    :geometry (geometry :x "590px" :y "320px" :width "100px" :height "100px")
+			     				(reboot_full))
+     (defwindow lock_full 
+			    :geometry (geometry :x "700px" :y "320px" :width "100px" :height "100px")
+			     				(lock_full))
+     (defwindow suspend_full 
+			    :geometry (geometry :x "1093px" :y "439px" :width "100px" :height "100px")
+			     				(suspend_full))
+     (defwindow logout_full 
+			    :geometry (geometry :x "810px" :y "320px" :width "100px" :height "100px")
+			     				(logout_full))
+     (defwindow close_full :geometry (geometry :x "633px" :y "649px" :width "100px" :height "100px")
+			     				(close_full))

@@ -1,0 +1,203 @@
+* {
+  all: unset;
+}
+
+window {
+  background-color: #0e0e0e;
+  font-family: FiraCode Nerd Font;
+}
+
+.weather-icon {
+  font-size: 55px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 80px;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-family: FiraCode;
+}
+.weather-stat {
+  font-size: 13px;
+  padding-top: 0px;
+  padding-left: 80px;
+  padding-right: 10px ;
+  margin-top: -40px;
+  margin-bottom: -10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.temperature {
+  margin-top: -20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 25px;
+  margin-left: 5px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.weather-quote-head  {
+  margin: 10px 0px 0px 0px;
+  font-size: 0px;
+}
+.weather-quote-tail 
+{
+  margin: -5px 0px 5px 0px;
+  font-size: 0px;
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6 {
+  font-size: 0px;
+  font-weight: 600;
+}
+
+
+button {
+  all: unset;
+  background-color: #121212;
+  padding: 10px;
+  font-family: FiraCode;
+}
+
+.musicart {
+  background-size: 260px;
+  min-height: 260px;
+  min-width: 260px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.musictitle {
+ font-family: FiraCode;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+ 
+}
+
+.musicartist {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.musicbtn button {
+  font-size: 12px;
+}
+
+.musicbtn button:hover {
+  color: #D35D6E;
+  font-family: FiraCode;
+}
+
+.music-slider scale trough {
+	all: unset;
+	background-color: #4e4e4e;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 240px;
+  margin-bottom: 20px;
+}
+
+.music-slider scale trough highlight {
+	all: unset;
+	background-color: #ffd5cd;
+	color: #000000;
+	border-radius: 10px;
+}
+
+.music-slider slider {
+  all: unset;
+  color: #ffd5cd;
+}
+.musicart-side {
+ background-color: #0e0e0e;
+  background-size: 92px;
+  min-height: 90px;
+  min-width: 90px;
+  margin: 15px 5px 15px 15px;
+  border-radius: 6px;
+   font-family: FiraCode;
+}
+.musicinfo-side {
+  font-size: 13px;
+  margin-top: 32px;
+  font-weight: bold;
+  border-radius: 10px;
+  min-width: 40px;
+}
+.musicbtn-side {
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+.musicbtn-side button {
+  font-size: 17px;
+  padding-right: 30px;
+}
+
+.musicbtn-side button:hover {
+  color: #58baf1;
+}
+.pause-play-side {
+  color: #ffffff;
+}
+.pause-play-side:hover {
+  color: #58baf1;
+}
+
+.time-side {
+  margin: 20px 65px 0px 65px;
+  font-size: 60px;
+}
+.minute-side {
+  color: #D35D6E;
+}
+.day-side {
+  font-size: 16px;
+  font-weight: bold;
+  color: #90c861;
+}
+
+.sliders-side slider {
+  all: unset;
+  color: #ffd5cd;
+}
+.slider-vol-side {
+  margin-top: 10px;
+}
+
+
+
+.search-side {
+  border-radius: 12px;
+  background-color: #272626;
+  margin: 20px 30px 20px 30px;
+}
+.search-side:hover {
+  color: #D35D6E;
+}
+.sysbtn button {
+  font-size: 30px;
+}
+.shutdown-side ~ button:hover {
+  color: #D35D6E;
+}
+.shutdown-side{
+  color: #D35D6E;
+}
+.shutdown-side:hover{
+  color: #ffd5cd;
+}
+.reboot-side{
+  color: #84afdb;
+}
+.lock-side{
+  color: #ffd5cd;
+}
+.suspend-side{
+  color: #c47eb7;
+}
+.logout-side{
+  color: #90c861;
