@@ -23,7 +23,14 @@ Here are some details about my setup:
    - **Dock**:             [Polybar](https://github.com/polybar/polybar)
    - **Notification** :    [Dunst](https://github.com/dunst-project/dunst)
    - **Wallpaper**:      [Wallpaper](https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/house.jpg)
-   
+
+## Font Used
+  ```sh
+    Firacode Nerd Font
+    JetBrains Nerd Mono Font
+    Quicksand Font
+    Font Awesome 
+   ```
 <p align="center">
   <b> Bye </b>
 </p>
