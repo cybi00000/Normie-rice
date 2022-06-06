@@ -25,6 +25,7 @@ Here are some details about my setup:
    - **Wallpaper**:      [Wallpaper](https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/house.jpg)
    - **Fetcher** :       [Pfetch-btw](https://github.com/FedericoAntoniazzi/pfetch-btw)
    - **Cli-file-explorer** : [Ranger](https://github.com/ranger/ranger)
+   - **Document-Viewer** : [Zathura](https://pwmt.org/projects/zathura)
 
 ## Font Used
   ```sh
