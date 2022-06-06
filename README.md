@@ -26,6 +26,7 @@ Here are some details about my setup:
    - **Fetcher** :       [Pfetch-btw](https://github.com/FedericoAntoniazzi/pfetch-btw)
    - **Cli-file-explorer** : [Ranger](https://github.com/ranger/ranger)
    - **Document-Viewer** : [Zathura](https://pwmt.org/projects/zathura)
+   - **Spotiy-themer** :   [Spicetify](https://spicetify.app)
 
 ## Font Used
   ```sh
