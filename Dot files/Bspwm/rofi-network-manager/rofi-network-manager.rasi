@@ -1,0 +1,179 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    lines:							10;
+    columns:						1;
+    font: 							"JetBrains Mono Nerd Font 11";
+    bw: 							0;
+    location: 						0;
+    padding: 						0;
+    fixed-num-lines: 				true;
+    show-icons: 					false;
+    sidebar-mode: 					true;
+    separator-style: 				"none";
+    hide-scrollbar: 				true;
+    fullscreen: 					false;
+    fake-transparency: 				false;
+    scroll-method: 					1;
+    click-to-exit: 					true;
+}
+
+@import "/usr/share/rofi/themes/mask.rasi"
+
+* {
+    background-color:             	@bg;
+}
+
+window {
+    border: 						0px;
+    border-color: 					@ac;
+    border-radius: 					0px;
+    padding: 						20;
+    width: 							50%;
+    height: 						50%;
+}
+
+prompt {
+    spacing: 						0;
+    border: 						0;
+    text-color: 					@fg;
+}
+
+textbox-prompt-colon {
+    expand: 						false;
+    str: 							" ";
+    margin:							0px 4px 0px 0px;
+    text-color: 					@purple;
+}
+
+entry {
+    spacing:    					2;
+    text-color: 					@purple;
+}
+
+case-indicator {
+    spacing:    					0;
+    text-color: 					@purple;
+}
+
+inputbar {
+    spacing:    					5px;
+    text-color: 					@purple;
+    padding:    					10px;
+    children: 						[ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+mainbox {
+    border: 						0px;
+    border-color: 					@ac;
+    padding: 						2;
+}
+
+listview {
+    dynamic:                                           true;
+    fixed-height: 					20%;
+    text-color: 					@fg;
+    border: 						0px;
+    border-radius :                                     12px;
+    border-color: 					@ac;
+    spacing: 						5px;
+    scrollbar: 						false;
+    padding: 						20px 12px 10px 20px;
+}
+
+element-text {
+ background-color: inherit;
+ text-color: inherit;
+ padding: 3px;
+}
+
+element {
+    border: 				        2px;
+    padding: 					0px;
+    text-color: 					@fg;
+}
+element normal.normal {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element normal.urgent {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element normal.active {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element selected.normal {
+    background-color: 				@blui;
+     border-radius :                                      5px;
+    text-color:       				@blue;
+}
+element selected.urgent {
+    background-color: 				@bg;
+    text-color:       				@red;
+}
+element selected.active {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element alternate.normal {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element alternate.urgent {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+element alternate.active {
+    background-color: 				@bg;
+    text-color:       				@white;
+}
+
+sidebar {
+    border:       					2px;
+    border-color: 					@ac;
+    border-radius: 					20px;
+}
+
+button {
+    margin: 						5px;
+    padding: 						5px;
+    text-color: 					@yellow;
+    border: 						0px;
+    border-radius: 					20px;
+    border-color: 					@yellow;
+}
+
+button selected {
+    text-color: 					@fg;
+    border: 						3px;
+    border-radius: 					20px;
+    border-color: 					@trans;
+}
+
+scrollbar {
+    width:        					4px;
+    border:       					0px;
+    handle-color: 					@fg;
+    handle-width: 					8px;
+    padding:      					0;
+}
+
+message {
+    border: 						0px;
+    border-color: 					@ac;
+    padding: 						1px;
+}
+
+textbox {
+    text-color: 					@fg;
+}
+
