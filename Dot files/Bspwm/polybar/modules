@@ -1,0 +1,431 @@
+[module/bspwm]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ 
+label-font = 4
+label-monitor = %name%
+format = <label-state> <label-mode>
+
+
+
+label-focused = %name%
+label-focused-background = ${color.background}
+;label-focused-underline= #000000
+label-focused-padding = 2
+label-focused-foreground = #58baf1
+
+label-occupied = %name%
+label-occupied-padding = 2
+label-occupied-background = ${color.background}
+label-occupied-foreground = #3d7ee3
+
+label-urgent = %name%
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-foreground = ${color.grey}
+label-empty-padding = 2
+label-empty-background = ${color.background}
+;label-monocle = "  "
+;label-monocle-foreground = ${colors.foreground}
+;label-tiled = "  "
+;label-tiled-foreground = ${colors.foreground}
+;label-fullscreen = "  "
+;label-fullscreen-foreground = ${colors.foreground}
+;label-floating = "  "
+;label-floating-foreground = ${colors.foreground}
+;label-pseudotiled = "  "
+;label-pseudotiled-foreground = ${colors.foreground}
+;label-locked = "  "
+;label-locked-foreground = ${colors.foreground}
+;label-sticky = "  "
+;label-sticky-foreground = ${colors.foreground}
+;label-private =  "     "
+;label-private-foreground = ${colors.foreground}
+
+; Separator in between workspaces
+;label-separator = |
+;label-separator-padding = 10
+;label-separator-foreground = #ffb52a
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+
+################################################################################
+
+[module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = internal/date
+; Seconds to sleep between updates
+interval = 5
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+;date = "%a"
+date-alt = " %b-%d"
+time = %l:%M%p
+;time-alt = %l:%M%p
+format-prefix = " "
+format-prefix-alt = ""
+label-font = 6
+format-prefix-foreground = #ffffff
+format-prefix-padding = 0
+format-foreground = ${color.grey2}
+format-background = ${color.background}
+format-margin = 0
+label-padding = 1
+label-margin = 0
+;label-overline = #ffffff
+;label-underline = #ffffff
+;format-underline = #edb9e3
+initial = 1
+label = "%date%%time% "
+
+#######################################################
+
+[module/memory2]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label =  %percentage_used%%
+label-padding = 0
+;label-foreground = #c885ff
+label-font = 6
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = #ffffff
+;format-underline = #3384d0
+format-foreground = #ffffff
+format-background = ${color.grey4}
+
+
+######################################
+
+[module/volume]
+;https://github.com/jaagr/polybar/wiki/Module:-volume
+type = internal/volume
+format-volume = "<label-volume>  <bar-volume>"
+
+label-volume = ""
+label-volume-foreground = #ffffff
+label-muted = "婢"
+format-font = 5
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #40ad4b
+bar-volume-foreground-1 = #40ad4b
+bar-volume-foreground-2 = #40ad4b
+bar-volume-foreground-3 = #40ad4b
+bar-volume-foreground-4 = #40ad4b
+bar-volume-foreground-5 = #40ad4b
+bar-volume-foreground-6 = #40ad4b
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 4
+bar-volume-fill = 
+bar-volume-fill-font = 4
+bar-volume-empty = 
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${colors.foreground}
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.background}
+format-muted-prefix-foreground = "#ff0000"
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.background}
+format-padding = 0
+
+################################################################################
+#
+# vim:ft=dosini
+
+##Pulse-audio
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+format-underline = #edb9e3
+label-padding = 2
+label-foreground = #000000
+format-background = #88aee4
+
+# Icons mixed from Font Awesome 5 and Material Icons
+# You can copy-paste your options for each possible action, which is more
+# trouble-free but repetitive, or apply only the relevant ones (for example
+# --sink-blacklist is only needed for next-sink).
+exec = pulseaudio-control --icons-volume " , " --icon-muted " " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo:  Speakers" --sink-nickname "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo:  Headphones" listen
+click-right = exec pavucontrol &
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" next-sink
+scroll-up = pulseaudio-control --volume-max 100 up
+scroll-down = pulseaudio-control --volume-max 100 down
+
+#Dunst
+[module/dunst]
+type = custom/ipc
+initial = 1
+format-foreground = ${color.pink}
+format-background = ${color.background}
+format-padding = 0
+hook-0 = echo "%{A1:dunstctl set-paused true && polybar-msg hook dunst 2:}%{A}" &
+hook-1 = echo "%{A1:dunstctl set-paused false && polybar-msg hook dunst 1:}%{A}" &
+
+
+[module/weather]
+type = custom/text
+content = ""
+interval = 960
+content-foreground = #c357fd
+format-background = ${color.background}
+format-foreground = #c357fd
+format-font = 2
+click-left = ~/.config/polybar/scripts/weather-toogle-enable.sh
+click-right = ~/.config/polybar/scripts/weather-toogle-disable.sh
+
+
+[module/wifi]
+type = internal/network
+interface = wlan0
+interval = 3.0
+unknown-as-up = true
+format-connected-background  = ${colors.background}
+format-connected-foreground  = #ffef40
+format-connected-padding = 0
+format-connected = %{A1:~/.config/rofi/rofi-network-manager/rofi-network-manager.sh:}<label-connected>%{A}
+label-connected =""
+format-disconnected-background  = ${colors.background}
+format-disconnected-foreground = #ffef40
+format-disconnected-padding = 0
+format-disconnected = %{A1:~/.config/rofi/rofi-network-manager/rofi-network-manager.sh:}<label-disconnected>%{A}
+label-disconnected ="睊"
+
+
+
+[module/wifi2]
+type = internal/network
+interface = wlan0
+interval = 3.0
+label-connected-background = ${color.background5}
+label-connected = "%{A1:kitty --class "Nmtui" -e nmtui &:}  %essid%     %{A}" 
+label-disconnected = "%{A1:kitty --class "Nmtui" -e nmtui &:}%{T2}%{T-}      %{A}"
+label-connected-separator = 
+label-connected-separator-foreground = #000000
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+interval = 5
+
+
+format-volume = <ramp-volume>
+format-volume-foreground = ${color.foreground2}
+format-volume-background = ${color.background4}
+format-font = 1
+
+format-prefix-foreground = ${color.foreground2}
+format-prefix-background = ${color.background4}
+
+
+
+format-muted = <label-muted>
+format-muted-prefix = %{T1} %{T-}
+format-muted-prefix-foreground = ${color.blue}
+format-muted-prefix-background = ${color.background4}
+
+
+ramp-volume-0 = %{T1} %{T-}
+ramp-volume-1 = %{T1} %{T-}
+ramp-volume-2 = %{T1} %{T-}
+ramp-volume-foreground = ${color.blue}
+ramp-volume-background = ${color.background4}
+
+label-muted = 🔇 
+label-volume-background = ${color.background4}
+label-volume-foreground = ${color.blue}
+label-muted-background = ${color.background}
+label-muted-foreground = ${color.blue}
+
+click-right = pavucontrol &
+
+[module/cpu]
+type = internal/cpu
+interval = 5.0
+
+format = <label> 
+format-prefix = "%{A1:alacritty -e htop:}%{T1}%{T-}%{A}"
+format-prefix-foreground = ${color.foreground2}
+format-foreground = ${color.foreground2}
+format-background = ${color.pink2}
+;label-padding =1
+ 
+
+label = "%{A1:kitty -e htop:}%{T2}%percentage:2%%%{T-}%{A}"
+
+[module/powermenu]
+type = custom/menu
+
+format-foreground = #757575
+format-background = #ef92ee
+
+
+label-open = "¿?"
+label-open-font = 4
+label-close = ""
+label-close-foreground = #757575
+label-separator = " / "
+label-separator-foreground = #757575
+
+; shutdown
+menu-0-0 = "  "
+menu-0-0-exec = systemctl poweroff
+menu-0-0-foreground = #757575
+
+[module/launcher]
+type=custom/text
+content =  ""
+content-font = 7
+content-foreground= ${color.grey2}
+content-background = ${color.blue} 
+content-padding = 0
+content-separator = 
+
+click-left= rofi -show run
+click-right= conky 
+
+#############Disk space############
+
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /home/cybi/Misc
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = false
+
+; Spacing (number of spaces, pixels, points) between entries
+; Default: 2
+spacing = 4
+
+; Default: 90
+; New in version 3.6.0
+warn-percentage = 75
+format-mounted = <label-mounted>
+label-mounted = "%free%"
+format-mounted-prefix = ""
+format-mounted-prefix-padding = 2
+format-mounted-prefix-font = 4
+format-mounted-prefix-background = ${color.grey4}
+format-background = ${color.grey4}
+label-mounted-background = ${color.grey4}
+label-unmounted-background = ${color.grey4}
+click-left = nautilus
+
+################################################
+[module/kernel]
+type = custom/script
+exec = uname -r 
+interval = 600
+label-background = ${color.grey4}
+################################################
+[module/pulseaudio3]
+type = custom/text
+content =  ""
+content-font = 7
+content-foreground= ${color.blue}
+content-background = ${color.background4}
+content-padding = 0
+content-separator = 
+
+scroll-up = ~/.config/dunst/volume.sh up
+scroll-down = ~/.config/dunst/volume.sh down 
+click-right = ~/.config/dunst/volume.sh mute
+############################################
+################################################################################
+
+[module/Music]
+type = custom/text
+content = ""
+content-foreground = #fdeb57
+content-background = ${color.background}
+content-font = 7
+click-left = ~/.config/polybar/scripts/player.sh
+click-right = ~/.config/polybar/scripts/player-close.sh
+##############################################################
+[module/spotify]
+type = custom/script
+tail = true
+interval = 1
+; prefix symbol is shown before the text
+format-prefix = " "
+format-font = 7
+format = <label>
+format-foreground = #0e0e0e
+format-background = #50e7ff
+exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
+format-padding = 1
+
+[module/spotify-prev]
+type = custom/script
+exec = echo "ﭢ"
+format = <label>
+click-left = playerctl previous -p spotify
+format-background = #50e7ff
+format-foreground = #0e0e0e
+
+format-font = 7
+
+[module/spotify-play-pause]
+type = custom/ipc
+hook-0 = echo ""
+hook-1 = echo ""
+initial = 1
+click-left = playerctl play-pause -p spotify
+format-background = #50e7ff
+format-foreground = #0e0e0e
+
+format-font = 7
+
+[module/spotify-next]
+type = custom/script
+exec = echo "ﭠ"
+format = <label>
+click-left = playerctl next -p spotify
+format-background = #50e7ff
+format-foreground = #0e0e0e
+
+format-font = 7
+##############################
+[module/Powermenu]
+type = custom/text
+content = "⏻"
+content-foreground =  #000000
+content-background = #58baf1
+content-font = 9
+click-left = ~/.config/polybar/scripts/Powermenu.sh
+click-right = ~/.config/polybar/scripts/Powermenu-close.sh
+
+
+
+
+
+
