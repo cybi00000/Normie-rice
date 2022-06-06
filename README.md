@@ -6,7 +6,7 @@
 <p align="center">
   <b> BSPWM RICE </b>
 </p>
-<img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="600px">
+<img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="450px">
 This is my personal collection of configuration files.
 
 Here  my **BSPWM** configuration.
@@ -48,7 +48,7 @@ Here are some details about my setup:
 <p align="center">
   <b> I3 RICE </b>
 </p>
-<img src="https://cdn.discordapp.com/attachments/862918880523583498/876800495463829524/ricecomplete.png" alt="img" align="right" width="600px">
+<img src="https://cdn.discordapp.com/attachments/862918880523583498/876800495463829524/ricecomplete.png" alt="img" align="right" width="450px">
 
 Here  my **i3-Gaps** configuration.
 Setup Info:
