@@ -20,6 +20,13 @@ Here are some details about my setup:
    - **Compositor:**           [picom](https://github.com/yshui/picom)
    - **Browser:**              [Waterfox](https://www.waterfox.net)
    - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
+   - **Dock**:             [Polybar](https://github.com/polybar/polybar)
+   - **Notification** :    [Dunst](https://github.com/dunst-project/dunst)
+   - **Wallpaper**:      [Wallpaper](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+)
+   
+<p align="center">
+  <b> Bye </b>
+</p>
 
 ---
 
@@ -30,17 +37,27 @@ Here are some details about my setup:
 <p align="center">
   <b> I3 RICE </b>
 </p>
-
--**Wallpaper**: [Ichigoame](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+).*
--**Dock**: Polybar
--**Wm**: i3-gaps
--**Terminal Font**:Bevietnam
--**Terminal** : Terminator
--**compositor** : [Picom jonnaburg fork](https://github.com/jonaburg/picom)*
--**Notification** : Dunst*
--**Launcher** : Rofi
--**Rofi theme** : [adi1090](https://github.com/adi1090x/rofi)* (I modified the theme to my liking) 
 <img src="https://cdn.discordapp.com/attachments/862918880523583498/876800495463829524/ricecomplete.png" alt="img" align="right" width="600px" height="1000">
+
+Here  my **i3-Gaps** configuration.
+Setup Info:
+
+  - **Wallpaper**:        [Ichigoame](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+).
+  - **Dock**:             [Polybar](https://github.com/polybar/polybar)
+  - **Wm**:               [i3-gaps](https://github.com/Airblader/i3)
+  - **Terminal Font**:    Bevietnam
+  - **Terminal** :        [Terminator](https://github.com/gnome-terminator/terminator)
+  - **compositor** :      [Picom jonnaburg fork](https://github.com/jonaburg/picom)
+  - **Notification** :    [Dunst](https://github.com/dunst-project/dunst)
+  - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
+  - **Rofi theme** :     [adi1090](https://github.com/adi1090x/rofi)* (I modified the theme to my liking) 
+
+<p align="center">
+  <b> Bye </b>
+</p>
+
+
+---
 
 
 
