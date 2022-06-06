@@ -6,7 +6,7 @@
 <p align="center">
   <b> BSPWM RICE </b>
 </p>
-<img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="650px">
+<img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="600px">
 This is my personal collection of configuration files.
 
 Here  my **BSPWM** configuration.
@@ -22,7 +22,7 @@ Here are some details about my setup:
    - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
    - **Dock**:             [Polybar](https://github.com/polybar/polybar)
    - **Notification** :    [Dunst](https://github.com/dunst-project/dunst)
-   - **Wallpaper**:      [Wallpaper](https://gelbooru.com/index.php?page=post&s=view&id=6195212&tags=ichigoame+)
+   - **Wallpaper**:      [Wallpaper](https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/house.jpg)
    
 <p align="center">
   <b> Bye </b>
