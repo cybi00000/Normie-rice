@@ -2,6 +2,11 @@
 <p align="center">
   <img width="35%" src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/ign_waifu.png" />
 </p>
+<p align="center">
+  <img src="https://badges.pufler.dev/visits/cybi00000/Normie-rice?color=4e80e9&style=for-the-badge">
+  <img src="https://img.shields.io/github/license/cybi00000/Normie-rice?color=a174f3&style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/cybi00000/Normie-rice?color=58d1f5&style=for-the-badge">
+</p>
 
 <p align="center">
   <b> BSPWM RICE </b>
