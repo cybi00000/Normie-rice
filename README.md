@@ -44,7 +44,7 @@ Here are some details about my setup:
 
 
 
-
+<!-- HEADERS -->
 <p align="center">
   <b> I3 RICE </b>
 </p>
@@ -66,6 +66,7 @@ Setup Info:
 <p align="center">
   <b> Bye </b>
 </p>
+
 ---
 
 
