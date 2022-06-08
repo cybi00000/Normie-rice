@@ -5,7 +5,7 @@ set selection-clipboard "clipboard"
 # Swaps Foreground for Background to get a light version if the user prefers
 
 #
-# Dracula color theme
+#  color theme
 #
 
 set notification-error-bg       "#ff5555" # Red
