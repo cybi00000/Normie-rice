@@ -12,7 +12,7 @@
   <b> BSPWM RICE </b>
 </p>
 <img src="https://raw.githubusercontent.com/cybi00000/Normie-rice/main/Dot%20files/NOrmie2.png" alt="img" align="right" width="450px">
-This is my personal collection of configuration files.
+
 
 Here  my **BSPWM** configuration.
 Here are some details about my setup:
