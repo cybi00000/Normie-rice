@@ -52,7 +52,7 @@ Here are some details about my setup:
 <p align="center">
   <b> I3 RICE </b>
 </p>
-<img src="https://www.tumblr.com/778jibon/776484270149697536?source=share" alt="img" align="right" width="450px">
+<img src="https://github.com/cybi00000/Normie-rice/blob/main/Dot%20files/7qv8o8lg1ph71.png" alt="img" align="right" width="450px">
 
 Here  my **i3-Gaps** configuration.
 Setup Info:
