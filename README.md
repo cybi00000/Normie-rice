@@ -52,7 +52,7 @@ Here are some details about my setup:
 <p align="center">
   <b> I3 RICE </b>
 </p>
-<img src="https://cdn.discordapp.com/attachments/862918880523583498/876800495463829524/ricecomplete.png" alt="img" align="right" width="450px">
+<img src="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F7qv8o8lg1ph71.png" alt="img" align="right" width="450px">
 
 Here  my **i3-Gaps** configuration.
 Setup Info:
